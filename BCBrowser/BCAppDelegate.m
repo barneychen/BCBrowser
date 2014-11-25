@@ -8,13 +8,15 @@
 
 #import "BCAppDelegate.h"
 #import "BCBaseViewController.h"
+#import "BCRootViewController.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.baseViewController = [[BCBaseViewController alloc] init];
-    self.window.rootViewController = self.baseViewController;
+    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.baseViewController];
+    self.window.rootViewController = navc;
     [self.window makeKeyAndVisible];
     return YES;
 }

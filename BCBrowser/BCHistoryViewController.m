@@ -25,10 +25,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    self.navigationController.toolbarHidden = YES;
+    self.navigationItem.title = @"歷史紀錄";
+    
     self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
 }

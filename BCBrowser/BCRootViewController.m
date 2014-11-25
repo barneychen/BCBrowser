@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
     self.searchKey.delegate = self;
     [self.searchKey becomeFirstResponder];
 }
@@ -29,9 +28,9 @@
     [super viewWillAppear:animated];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
-    self.navigationController.toolbarHidden = YES;
+//    [self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+//    [self.navigationController.navigationBar setShadowImage:[[UIImage alloc] init]];
+//    self.navigationController.toolbarHidden = YES;
     self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     
 }
@@ -48,7 +47,7 @@
 
 -(void)textFieldDidBeginEditing:(UITextField *)sender {
     [self keyboardWillShow];
-    self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
+    
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
@@ -58,6 +57,7 @@
     if (![textField.text isEqualToString:@""]) {
         [historyVC.history addObject:textField.text];
         webVC.urlStr = textField.text;
+        [webVC reloadWebView];
         [self.mm_drawerController openDrawerSide:MMDrawerSideRight animated:YES completion:nil];
     }
 }
@@ -76,6 +76,7 @@
 }
 
 - (void)keyboardWillShow {
+    self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeNone;
     if (self.view.frame.origin.y >= 0) {
         [self setViewMovedUp:YES];
     } else if (self.view.frame.origin.y < 0) {
@@ -84,6 +85,7 @@
 }
 
 - (void)keyboardWillHide {
+    self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     if (self.view.frame.origin.y >= 0) {
         [self setViewMovedUp:YES];
     } else if (self.view.frame.origin.y < 0) {

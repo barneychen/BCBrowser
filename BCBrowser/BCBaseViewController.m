@@ -14,15 +14,13 @@
 
 @implementation BCBaseViewController
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.root = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCRootViewController"];
     self.web = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCWebViewController"];
     self.history = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCHistoryViewController"];
+    
     self.web.urlStr = @"http://www.google.com";
     self.drawer = [[MMDrawerController alloc] init];
     self.drawer.centerViewController = self.root;

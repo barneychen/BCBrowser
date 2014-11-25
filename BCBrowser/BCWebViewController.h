@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (nonatomic, strong) NSString *urlStr;
-@property (weak, nonatomic) IBOutlet UIButton *back;
+
+- (void)reloadWebView;
 
 @end
