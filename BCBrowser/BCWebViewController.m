@@ -26,6 +26,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self reloadWebView];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:nil];
     self.mm_drawerController.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
     self.mm_drawerController.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
     

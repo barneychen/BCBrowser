@@ -16,7 +16,7 @@
 {
     self.baseViewController = [[BCBaseViewController alloc] init];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.baseViewController];
-    self.window.rootViewController = navc;
+    self.window.rootViewController = self.baseViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -19,13 +19,15 @@
     
     self.root = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCRootViewController"];
     self.web = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCWebViewController"];
+    UINavigationController *navWeb = [[UINavigationController alloc] initWithRootViewController:self.web];
     self.history = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCHistoryViewController"];
+    UINavigationController *navHistory = [[UINavigationController alloc] initWithRootViewController:self.history];
     
     self.web.urlStr = @"http://www.google.com";
     self.drawer = [[MMDrawerController alloc] init];
     self.drawer.centerViewController = self.root;
-    self.drawer.rightDrawerViewController = self.web;
-    self.drawer.leftDrawerViewController = self.history;
+    self.drawer.rightDrawerViewController = navWeb;
+    self.drawer.leftDrawerViewController = navHistory;
     
     self.drawer.showsShadow = NO;
     self.drawer.maximumLeftDrawerWidth = self.view.frame.size.width;
