@@ -136,6 +136,69 @@
             </objects>
             <point key="canvasLocation" x="565" y="-36"/>
         </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="3v9-px-WSq">
+            <objects>
+                <viewController storyboardIdentifier="BCWeatherViewController" id="ral-0w-gcG" customClass="BCWeatherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yie-wu-cAk"/>
+                        <viewControllerLayoutGuide type="bottom" id="lcA-Wo-NJV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GIk-g1-hMP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="28" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28q-54-GQS">
+                                <rect key="frame" x="16" y="28" width="288" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="rbK-W7-bpK">
+                                <rect key="frame" x="0.0" y="136" width="320" height="376"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="BCHistoryCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="BCHistoryCell" rowHeight="69" id="erA-cE-Uf8" customClass="BCHistoryCell">
+                                        <rect key="frame" x="10" y="146" width="320" height="69"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="erA-cE-Uf8" id="mTL-DL-n8v">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AC9-Zq-KJD">
+                                                    <rect key="frame" x="16" y="54" width="288" height="2"/>
+                                                </progressView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="搜尋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epv-kV-Dmi">
+                                                    <rect key="frame" x="16" y="16" width="288" height="38"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="keyLabel" destination="epv-kV-Dmi" id="8WV-97-FkK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rbK-W7-bpK" secondAttribute="bottom" constant="56" id="3Da-jJ-LvZ"/>
+                            <constraint firstItem="rbK-W7-bpK" firstAttribute="top" secondItem="GIk-g1-hMP" secondAttribute="top" constant="136" id="GuQ-d5-Ncf"/>
+                            <constraint firstItem="rbK-W7-bpK" firstAttribute="leading" secondItem="GIk-g1-hMP" secondAttribute="leading" id="Kbv-Z2-OIu"/>
+                            <constraint firstAttribute="trailing" secondItem="rbK-W7-bpK" secondAttribute="trailing" id="kf5-AZ-wI8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="rbK-W7-bpK" id="d3S-sd-My0"/>
+                        <outlet property="tempLabel" destination="28q-54-GQS" id="6Re-S6-TYF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPn-dc-gpq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="234"/>
+        </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

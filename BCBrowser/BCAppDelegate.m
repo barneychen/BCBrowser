@@ -9,14 +9,16 @@
 #import "BCAppDelegate.h"
 #import "BCBaseViewController.h"
 #import "BCRootViewController.h"
+#import "BCWeatherViewController.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.baseViewController = [[BCBaseViewController alloc] init];
-    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.baseViewController];
-    self.window.rootViewController = self.baseViewController;
+//    self.baseViewController = [[BCBaseViewController alloc] init];
+//    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.baseViewController];
+    BCWeatherViewController *vc =[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCWeatherViewController"];
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }

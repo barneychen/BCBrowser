@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F0F0B8688C7237431C3EF3D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A2E7DC26D8812C360D7CF8 /* libPods.a */; };
+		AE5ED5D81A271B90000846BA /* JLWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5ED5D71A271B90000846BA /* JLWeather.m */; };
+		AE5ED5DB1A271C81000846BA /* BCWeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE5ED5DA1A271C81000846BA /* BCWeatherViewController.m */; };
+		AE5ED5DD1A271D8A000846BA /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE5ED5DC1A271D8A000846BA /* CoreData.framework */; };
 		AE8774551A24EC5B00C1453D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8774541A24EC5B00C1453D /* main.m */; };
 		AE8774581A24EC5B00C1453D /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8774571A24EC5B00C1453D /* BCAppDelegate.m */; };
 		AE87745E1A24EC5B00C1453D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE87745C1A24EC5B00C1453D /* Main.storyboard */; };
@@ -35,6 +38,11 @@
 		30A2E7DC26D8812C360D7CF8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		627F60BE2A8B22A4D7B86327 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		9C0BDCAF15867924D97914FE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5ED5D61A271B90000846BA /* JLWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLWeather.h; sourceTree = "<group>"; };
+		AE5ED5D71A271B90000846BA /* JLWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLWeather.m; sourceTree = "<group>"; };
+		AE5ED5D91A271C81000846BA /* BCWeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCWeatherViewController.h; sourceTree = "<group>"; };
+		AE5ED5DA1A271C81000846BA /* BCWeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWeatherViewController.m; sourceTree = "<group>"; };
+		AE5ED5DC1A271D8A000846BA /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AE87744F1A24EC5B00C1453D /* BCBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BCBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE8774531A24EC5B00C1453D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AE8774541A24EC5B00C1453D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -64,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE5ED5DD1A271D8A000846BA /* CoreData.framework in Frameworks */,
 				0F0F0B8688C7237431C3EF3D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +90,7 @@
 		301717E76A28537B505D6EBB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE5ED5DC1A271D8A000846BA /* CoreData.framework */,
 				30A2E7DC26D8812C360D7CF8 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -109,6 +119,8 @@
 		AE8774511A24EC5B00C1453D /* BCBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				AE5ED5D61A271B90000846BA /* JLWeather.h */,
+				AE5ED5D71A271B90000846BA /* JLWeather.m */,
 				AE87748A1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.h */,
 				AE87748B1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m */,
 				AE8774781A24ED4B00C1453D /* BCBaseViewController.h */,
@@ -126,6 +138,8 @@
 				AE87745C1A24EC5B00C1453D /* Main.storyboard */,
 				AE87745F1A24EC5B00C1453D /* Images.xcassets */,
 				AE8774521A24EC5B00C1453D /* Supporting Files */,
+				AE5ED5D91A271C81000846BA /* BCWeatherViewController.h */,
+				AE5ED5DA1A271C81000846BA /* BCWeatherViewController.m */,
 			);
 			path = BCBrowser;
 			sourceTree = "<group>";
@@ -305,8 +319,10 @@
 				AE8774891A24ED4B00C1453D /* BCWebViewController.m in Sources */,
 				AE8774861A24ED4B00C1453D /* BCHistoryViewController.m in Sources */,
 				AE87748C1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m in Sources */,
+				AE5ED5D81A271B90000846BA /* JLWeather.m in Sources */,
 				AE8774581A24EC5B00C1453D /* BCAppDelegate.m in Sources */,
 				AE8774871A24ED4B00C1453D /* BCRootViewController.m in Sources */,
+				AE5ED5DB1A271C81000846BA /* BCWeatherViewController.m in Sources */,
 				AE8774551A24EC5B00C1453D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
