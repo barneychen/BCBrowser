@@ -10,6 +10,7 @@
 #import "BCBaseViewController.h"
 #import "BCRootViewController.h"
 #import "BCWeatherViewController.h"
+#import "BCAddLocationViewController.h"
 
 @implementation BCAppDelegate
 
@@ -17,8 +18,9 @@
 {
 //    self.baseViewController = [[BCBaseViewController alloc] init];
 //    UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:self.baseViewController];
-    BCWeatherViewController *vc =[[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCWeatherViewController"];
-    self.window.rootViewController = vc;
+    BCAddLocationViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"BCAddLocationViewController"];
+    UINavigationController *navWeb = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = navWeb;
     [self.window makeKeyAndVisible];
     return YES;
 }

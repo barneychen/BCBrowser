@@ -22,6 +22,10 @@
 		AE8774871A24ED4B00C1453D /* BCRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE87747F1A24ED4B00C1453D /* BCRootViewController.m */; };
 		AE8774891A24ED4B00C1453D /* BCWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE8774831A24ED4B00C1453D /* BCWebViewController.m */; };
 		AE87748C1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = AE87748B1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m */; };
+		AEC64F9A1A34C2DD005B7BF2 /* BCNaviViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC64F991A34C2DD005B7BF2 /* BCNaviViewController.m */; };
+		AEC64F9C1A34C359005B7BF2 /* Locations.plist in Resources */ = {isa = PBXBuildFile; fileRef = AEC64F9B1A34C359005B7BF2 /* Locations.plist */; };
+		AEC64F9F1A34C77A005B7BF2 /* BCNaviCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC64F9E1A34C77A005B7BF2 /* BCNaviCell.m */; };
+		AEC64FA21A34CE15005B7BF2 /* BCAddLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC64FA11A34CE15005B7BF2 /* BCAddLocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +69,13 @@
 		AE8774831A24ED4B00C1453D /* BCWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWebViewController.m; sourceTree = "<group>"; };
 		AE87748A1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebVIew+SwipeGesture.h"; sourceTree = "<group>"; };
 		AE87748B1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebVIew+SwipeGesture.m"; sourceTree = "<group>"; };
+		AEC64F981A34C2DD005B7BF2 /* BCNaviViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNaviViewController.h; sourceTree = "<group>"; };
+		AEC64F991A34C2DD005B7BF2 /* BCNaviViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNaviViewController.m; sourceTree = "<group>"; };
+		AEC64F9B1A34C359005B7BF2 /* Locations.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Locations.plist; sourceTree = "<group>"; };
+		AEC64F9D1A34C77A005B7BF2 /* BCNaviCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNaviCell.h; sourceTree = "<group>"; };
+		AEC64F9E1A34C77A005B7BF2 /* BCNaviCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNaviCell.m; sourceTree = "<group>"; };
+		AEC64FA01A34CE15005B7BF2 /* BCAddLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAddLocationViewController.h; sourceTree = "<group>"; };
+		AEC64FA11A34CE15005B7BF2 /* BCAddLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAddLocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +151,13 @@
 				AE8774521A24EC5B00C1453D /* Supporting Files */,
 				AE5ED5D91A271C81000846BA /* BCWeatherViewController.h */,
 				AE5ED5DA1A271C81000846BA /* BCWeatherViewController.m */,
+				AEC64F981A34C2DD005B7BF2 /* BCNaviViewController.h */,
+				AEC64F991A34C2DD005B7BF2 /* BCNaviViewController.m */,
+				AEC64F9B1A34C359005B7BF2 /* Locations.plist */,
+				AEC64F9D1A34C77A005B7BF2 /* BCNaviCell.h */,
+				AEC64F9E1A34C77A005B7BF2 /* BCNaviCell.m */,
+				AEC64FA01A34CE15005B7BF2 /* BCAddLocationViewController.h */,
+				AEC64FA11A34CE15005B7BF2 /* BCAddLocationViewController.m */,
 			);
 			path = BCBrowser;
 			sourceTree = "<group>";
@@ -262,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC64F9C1A34C359005B7BF2 /* Locations.plist in Resources */,
 				AE87745E1A24EC5B00C1453D /* Main.storyboard in Resources */,
 				AE8774601A24EC5B00C1453D /* Images.xcassets in Resources */,
 			);
@@ -319,6 +338,9 @@
 				AE8774891A24ED4B00C1453D /* BCWebViewController.m in Sources */,
 				AE8774861A24ED4B00C1453D /* BCHistoryViewController.m in Sources */,
 				AE87748C1A24EDDC00C1453D /* UIWebVIew+SwipeGesture.m in Sources */,
+				AEC64F9A1A34C2DD005B7BF2 /* BCNaviViewController.m in Sources */,
+				AEC64FA21A34CE15005B7BF2 /* BCAddLocationViewController.m in Sources */,
+				AEC64F9F1A34C77A005B7BF2 /* BCNaviCell.m in Sources */,
 				AE5ED5D81A271B90000846BA /* JLWeather.m in Sources */,
 				AE8774581A24EC5B00C1453D /* BCAppDelegate.m in Sources */,
 				AE8774871A24ED4B00C1453D /* BCRootViewController.m in Sources */,
